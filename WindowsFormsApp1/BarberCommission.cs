@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
             try
             {
                 conn.Open();
-                String query = "SELECT e.fname, e.lname, b.tot_salary, b.sal_date FROM barber_employee b INNER JOIN employee e ON b.emp_id = e.id  WHERE e.branch_id = " + GlobalVariables.User_Branch_ID + ";";
+                String query = "SELECT e.fname, e.lname, CONCAT('Php ', b.tot_salary), b.sal_date FROM barber_employee b INNER JOIN employee e ON b.emp_id = e.id  WHERE e.branch_id = " + GlobalVariables.User_Branch_ID + ";";
                 MySqlCommand comm = new MySqlCommand(query, conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
                 dataGridView1.DataSource = dt;
                 dataGridView1.Columns["fname"].HeaderText = "FirstName";
                 dataGridView1.Columns["lname"].HeaderText = "LastName";
-                dataGridView1.Columns["tot_salary"].HeaderText = "TotalSalary";
+                dataGridView1.Columns["CONCAT('Php ', b.tot_salary)"].HeaderText = "TotalSalary";
                 dataGridView1.Columns["sal_date"].HeaderText = "SalaryDate";
 
                 MySqlDataReader myReader;
@@ -67,6 +67,11 @@ namespace WindowsFormsApp1
             cashir.ref_barbercomm = this;
             cashir.Show();
             this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

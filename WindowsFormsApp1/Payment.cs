@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Payment : Form
     {
+        public Dashadmin ref_dashadmin { get; set; }
         public MySqlConnection conn;
         public ServiceDetail reftrans { get; set; }
        
@@ -24,6 +25,12 @@ namespace WindowsFormsApp1
 
         private void payBtn_Click(object sender, EventArgs e)
         {
+            {
+                BranchPrint br = new BranchPrint();
+                br.ref_dashadmin = this;
+                br.Show();
+                this.Hide();
+            }
             try
             {
                 if (payamtTxt.Text == String.Empty)
@@ -55,6 +62,7 @@ namespace WindowsFormsApp1
                     this.Hide();
 
                 }
+                
 
             }
             catch (Exception ee)
@@ -80,6 +88,19 @@ namespace WindowsFormsApp1
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void payamtTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (payamtTxt.Text == "")
+            {
+                changetxt.Text = "0";
+            }
+            else
+            {
+                decimal change = decimal.Parse(payamtTxt.Text.ToString()) - decimal.Parse(amtLabel.Text.ToString());
+                changetxt.Text = change.ToString("#,0.00");
+            }
         }
     }
 }

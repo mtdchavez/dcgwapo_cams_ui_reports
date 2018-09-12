@@ -134,7 +134,7 @@ namespace WindowsFormsApp1
                 {
                     conn.Open();
 
-                    String query = "UPDATE branch SET name = " + brnametxt.Text + ", 	location = " + locationTxt.Text + ", city = " + cityText.Text + " WHERE id = " + bridtext.Text + "";
+                    String query = "UPDATE branch SET name = " + brnametxt.Text + ", 	location = '" + locationTxt.Text + "', city = " + cityText.Text + " WHERE id = " + bridtext.Text + "";
                     MySqlCommand comm = new MySqlCommand(query, conn);
                     comm.ExecuteNonQuery();
 
@@ -273,6 +273,14 @@ namespace WindowsFormsApp1
             br.ref_dashadmin = this;
             br.Show();
             this.Hide();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Dashadmin admin = new Dashadmin();
+            admin.ref_branch = this;
+            admin.Show();
+            this.Close();
         }
     }
 }

@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
             try
             {
                 conn.Open();
-                String query = "UPDATE service SET status = '" + x + "' WHERE id = '" + serIDlab.Text + "'";
+                String query = "UPDATE service SET status = '" + x + "' WHERE id = '" + int.Parse(serIDlab.Text) + "'";
                 MySqlCommand comm = new MySqlCommand(query, conn);
                 comm.ExecuteNonQuery();
                 conn.Close();
@@ -112,7 +112,14 @@ namespace WindowsFormsApp1
             Dashcashier cashiir = new Dashcashier();
             cashiir.ref_dashcashier = this;
             cashiir.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String ser_id = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString();
+
+            serIDlab.Text = ser_id;
         }
     }
 }

@@ -66,8 +66,8 @@
             this.backBtn = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.empTab.SuspendLayout();
@@ -77,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cashier)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,7 +103,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(16, 483);
+            this.panel1.Location = new System.Drawing.Point(17, 557);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1216, 254);
@@ -345,7 +346,7 @@
             this.updEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.updEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updEmp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.updEmp.Location = new System.Drawing.Point(638, 747);
+            this.updEmp.Location = new System.Drawing.Point(638, 815);
             this.updEmp.Margin = new System.Windows.Forms.Padding(4);
             this.updEmp.Name = "updEmp";
             this.updEmp.Size = new System.Drawing.Size(165, 88);
@@ -360,19 +361,20 @@
             this.addEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.addEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.addEmp.Location = new System.Drawing.Point(444, 747);
+            this.addEmp.Location = new System.Drawing.Point(444, 815);
             this.addEmp.Margin = new System.Windows.Forms.Padding(4);
             this.addEmp.Name = "addEmp";
             this.addEmp.Size = new System.Drawing.Size(169, 88);
             this.addEmp.TabIndex = 60;
             this.addEmp.UseVisualStyleBackColor = false;
+            this.addEmp.Click += new System.EventHandler(this.addEmp_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(370, 28);
+            this.panel2.Location = new System.Drawing.Point(374, 75);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(529, 73);
@@ -408,7 +410,7 @@
             this.empTab.Controls.Add(this.tabPage2);
             this.empTab.Controls.Add(this.tabPage3);
             this.empTab.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empTab.Location = new System.Drawing.Point(16, 124);
+            this.empTab.Location = new System.Drawing.Point(17, 198);
             this.empTab.Margin = new System.Windows.Forms.Padding(4);
             this.empTab.Name = "empTab";
             this.empTab.SelectedIndex = 0;
@@ -429,6 +431,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 2);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
@@ -484,7 +487,7 @@
             this.backlabel.BackColor = System.Drawing.Color.Transparent;
             this.backlabel.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backlabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.backlabel.Location = new System.Drawing.Point(51, 102);
+            this.backlabel.Location = new System.Drawing.Point(55, 149);
             this.backlabel.Name = "backlabel";
             this.backlabel.Size = new System.Drawing.Size(39, 18);
             this.backlabel.TabIndex = 62;
@@ -500,13 +503,14 @@
             this.backBtn.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.backBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.backBtn.Location = new System.Drawing.Point(17, 13);
+            this.backBtn.Location = new System.Drawing.Point(21, 60);
             this.backBtn.Margin = new System.Windows.Forms.Padding(4);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(106, 88);
             this.backBtn.TabIndex = 61;
             this.backBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // label10
             // 
@@ -514,7 +518,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(513, 839);
+            this.label10.Location = new System.Drawing.Point(513, 907);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 18);
             this.label10.TabIndex = 74;
@@ -526,39 +530,33 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(695, 839);
+            this.label11.Location = new System.Drawing.Point(695, 907);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 18);
             this.label11.TabIndex = 75;
             this.label11.Text = "Update";
             // 
-            // label12
+            // panel3
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(1141, 109);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 18);
-            this.label12.TabIndex = 77;
-            this.label12.Text = "PRINT";
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Location = new System.Drawing.Point(-2, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1251, 41);
+            this.panel3.TabIndex = 87;
             // 
-            // button2
+            // label13
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(1100, 25);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 83);
-            this.button2.TabIndex = 76;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.label13.AllowDrop = true;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Location = new System.Drawing.Point(10, 7);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(99, 24);
+            this.label13.TabIndex = 84;
+            this.label13.Text = "Employee";
             // 
             // Employee
             // 
@@ -567,9 +565,8 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1249, 886);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1249, 944);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.updEmp);
@@ -579,7 +576,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.addEmp);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Employee";
             this.Text = "Employee";
@@ -595,6 +592,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cashier)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -638,7 +637,7 @@
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label13;
     }
 }

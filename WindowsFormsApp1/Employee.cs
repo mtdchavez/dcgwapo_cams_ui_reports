@@ -43,8 +43,6 @@ namespace WindowsFormsApp1
                 dataGridView1.Columns["birthday"].HeaderText = "Birthday";
                 dataGridView1.Columns["contact_number"].HeaderText = "Contact Number";
                 dataGridView1.Columns["position"].HeaderText = "Position";
-                dataGridView1.Columns["username"].Visible = false;
-                dataGridView1.Columns["password"].Visible = false;
                 dataGridView1.Columns["status"].HeaderText = "Status";
             }
             catch (Exception ee)
@@ -75,8 +73,6 @@ namespace WindowsFormsApp1
                 dataGridView2.Columns["birthday"].HeaderText = "Birthday";
                 dataGridView2.Columns["contact_number"].HeaderText = "Contact Number";
                 dataGridView2.Columns["position"].HeaderText = "Position";
-                dataGridView2.Columns["username"].Visible = false;
-                dataGridView2.Columns["password"].Visible = false;
                 dataGridView2.Columns["status"].HeaderText = "Status";
             }
             catch (Exception ee)
@@ -107,8 +103,6 @@ namespace WindowsFormsApp1
                 cashier.Columns["birthday"].HeaderText = "Birthday";
                 cashier.Columns["contact_number"].HeaderText = "Contact Number";
                 cashier.Columns["position"].HeaderText = "Position";
-                cashier.Columns["username"].Visible = false;
-                cashier.Columns["password"].Visible = false;
                 cashier.Columns["status"].HeaderText = "Status";
             }
             catch (Exception ee)
@@ -144,6 +138,19 @@ namespace WindowsFormsApp1
         private void back_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void addEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Dashadmin admin = new Dashadmin();
+            admin.ref_employee = this;
+            admin.Show();
+            this.Close();
         }
     }
 }

@@ -80,8 +80,6 @@ namespace WindowsFormsApp1
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            int empIdInt = empCombo.SelectedIndex;
-
             try
             {
                 if (empCombo.Text == "")
@@ -94,7 +92,7 @@ namespace WindowsFormsApp1
                     {
                         conn.Open();
                         
-                        String query = "call updCashierEmp(" + empIdInt + ", " + int.Parse(allowance.Text) + ")";
+                        String query = "UPDATE cashier_employee SET mon_salary = 1500.00, allowance = "+ double.Parse(allowance.Text) +" WHERE emp_id = "+ empIdInt +";";
                         MySqlCommand comm = new MySqlCommand(query, conn);
                         comm.ExecuteNonQuery();
 
@@ -118,6 +116,14 @@ namespace WindowsFormsApp1
             admin.ref_cashiercomm = this;
             admin.Show();
             this.Close();
+        }
+        public static int empID;
+        private void cashierEmpGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                empID = int.Parse(cashierEmpGrid.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            }
         }
     }
 }

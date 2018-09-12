@@ -52,15 +52,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(217, 34);
+            this.txtSearch.Location = new System.Drawing.Point(217, 78);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
@@ -72,8 +75,9 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.PaleTurquoise;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 132);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 176);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -91,7 +95,7 @@
             this.addbranch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.addbranch.Image = ((System.Drawing.Image)(resources.GetObject("addbranch.Image")));
             this.addbranch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.addbranch.Location = new System.Drawing.Point(257, 674);
+            this.addbranch.Location = new System.Drawing.Point(257, 686);
             this.addbranch.Margin = new System.Windows.Forms.Padding(4);
             this.addbranch.Name = "addbranch";
             this.addbranch.Size = new System.Drawing.Size(144, 91);
@@ -162,7 +166,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(37, 516);
+            this.label2.Location = new System.Drawing.Point(37, 560);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 34);
@@ -178,7 +182,7 @@
             this.updBranch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.updBranch.Image = ((System.Drawing.Image)(resources.GetObject("updBranch.Image")));
             this.updBranch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.updBranch.Location = new System.Drawing.Point(409, 674);
+            this.updBranch.Location = new System.Drawing.Point(409, 686);
             this.updBranch.Margin = new System.Windows.Forms.Padding(4);
             this.updBranch.Name = "updBranch";
             this.updBranch.Size = new System.Drawing.Size(144, 91);
@@ -194,7 +198,7 @@
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(592, 30);
+            this.btnSearch.Location = new System.Drawing.Point(592, 74);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(53, 48);
@@ -209,7 +213,7 @@
             this.openBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openBtn.Font = new System.Drawing.Font("Bahnschrift SemiLight", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.openBtn.Location = new System.Drawing.Point(563, 416);
+            this.openBtn.Location = new System.Drawing.Point(563, 460);
             this.openBtn.Margin = new System.Windows.Forms.Padding(4);
             this.openBtn.Name = "openBtn";
             this.openBtn.Size = new System.Drawing.Size(120, 49);
@@ -225,7 +229,7 @@
             this.renBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.renBtn.Font = new System.Drawing.Font("Bahnschrift SemiLight", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.renBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.renBtn.Location = new System.Drawing.Point(303, 415);
+            this.renBtn.Location = new System.Drawing.Point(303, 459);
             this.renBtn.Margin = new System.Windows.Forms.Padding(4);
             this.renBtn.Name = "renBtn";
             this.renBtn.Size = new System.Drawing.Size(232, 50);
@@ -241,7 +245,7 @@
             this.closedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closedBtn.Font = new System.Drawing.Font("Bahnschrift SemiLight", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closedBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.closedBtn.Location = new System.Drawing.Point(157, 415);
+            this.closedBtn.Location = new System.Drawing.Point(157, 459);
             this.closedBtn.Margin = new System.Windows.Forms.Padding(4);
             this.closedBtn.Name = "closedBtn";
             this.closedBtn.Size = new System.Drawing.Size(120, 50);
@@ -268,7 +272,7 @@
             this.backlabel.BackColor = System.Drawing.Color.Transparent;
             this.backlabel.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backlabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.backlabel.Location = new System.Drawing.Point(47, 102);
+            this.backlabel.Location = new System.Drawing.Point(47, 146);
             this.backlabel.Name = "backlabel";
             this.backlabel.Size = new System.Drawing.Size(39, 18);
             this.backlabel.TabIndex = 60;
@@ -284,13 +288,14 @@
             this.backBtn.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.backBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.backBtn.Location = new System.Drawing.Point(13, 13);
+            this.backBtn.Location = new System.Drawing.Point(13, 57);
             this.backBtn.Margin = new System.Windows.Forms.Padding(4);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(106, 88);
             this.backBtn.TabIndex = 59;
             this.backBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // panel1
             // 
@@ -300,7 +305,7 @@
             this.panel1.Controls.Add(this.cityText);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(13, 497);
+            this.panel1.Location = new System.Drawing.Point(13, 541);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(797, 170);
             this.panel1.TabIndex = 61;
@@ -310,7 +315,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.bridtext);
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Location = new System.Drawing.Point(13, 391);
+            this.panel2.Location = new System.Drawing.Point(13, 435);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(797, 100);
             this.panel2.TabIndex = 62;
@@ -321,7 +326,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(313, 769);
+            this.label1.Location = new System.Drawing.Point(313, 781);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 18);
             this.label1.TabIndex = 63;
@@ -333,7 +338,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(454, 769);
+            this.label5.Location = new System.Drawing.Point(454, 781);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 18);
             this.label5.TabIndex = 64;
@@ -345,7 +350,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(726, 97);
+            this.label7.Location = new System.Drawing.Point(726, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 18);
             this.label7.TabIndex = 66;
@@ -360,13 +365,35 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(685, 13);
+            this.button1.Location = new System.Drawing.Point(685, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 83);
             this.button1.TabIndex = 65;
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(826, 41);
+            this.panel3.TabIndex = 87;
+            // 
+            // label6
+            // 
+            this.label6.AllowDrop = true;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(10, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 24);
+            this.label6.TabIndex = 84;
+            this.label6.Text = "Branch";
             // 
             // Branch
             // 
@@ -375,7 +402,8 @@
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(825, 805);
+            this.ClientSize = new System.Drawing.Size(825, 813);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -393,7 +421,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Branch";
             this.Text = "Branch";
@@ -403,6 +431,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,5 +463,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label6;
     }
 }

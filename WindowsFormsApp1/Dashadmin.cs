@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
         public Service ref_service { get; set; }
         public Employee ref_employee { get; set; }
         public CashierCommission ref_cashiercomm { get; set; }
+        public OverallBranchSale ref_sales { get; set; }
 
         public MySqlConnection conn;
 
@@ -66,6 +67,38 @@ namespace WindowsFormsApp1
             log.ref_dashadmin = this;
             log.Show();
             this.Close();
+        }
+
+        private void Dashadmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.ref_dashadmin = this;
+            log.Show();
+            this.Close();
+        }
+
+        private void branchsale_Click(object sender, EventArgs e)
+        {
+            OverallBranchSale sales = new OverallBranchSale();
+            sales.ref_dashadmin = this;
+            sales.Show();
+            this.Hide();
+        }
+
+        private void notificationLbl_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Barber employee transfer has already end his duty, retrieve him now", "Okay", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Branch br = new Branch();
+                br.ref_dashadmin = this;
+                br.Show();
+                this.Hide();
+            }
         }
     }
 }
