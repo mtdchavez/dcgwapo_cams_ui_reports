@@ -145,6 +145,8 @@ namespace WindowsFormsApp1
             MySqlCommand getServiceID = new MySqlCommand("SELECT ID FROM SERVICE WHERE CONCAT(name, '/', price) LIKE'%" + serviceCombo.Text + "%'", conn);
             serviceIdInt = Convert.ToInt32(getServiceID.ExecuteScalar());
 
+
+
             try
             {
                 if (barberCombo.Text == String.Empty || serviceCombo.Text == String.Empty)
@@ -155,9 +157,9 @@ namespace WindowsFormsApp1
                 {
                     if (MessageBox.Show("Do you want to add the data?", "Confirm ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        conn.Open();
+                        
 
-                        String query = "CALL addOrder("+ tIDlabel.Text +", "+ barberIdInt +", "+ serviceIdInt +");";
+                        String query = "CALL addOrder("+ int.Parse(tIDlabel.Text) +", "+ barberIdInt +", "+ serviceIdInt +");";
                         MySqlCommand comm = new MySqlCommand(query, conn);
                         comm.ExecuteNonQuery();
 
