@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
                     {
                         conn.Open();
                         
-                        String query = "UPDATE cashier_employee SET mon_salary = 1500.00, allowance = "+ double.Parse(allowance.Text) +" WHERE emp_id = "+ empIdInt +";";
+                        String query = "UPDATE cashier_employee SET mon_salary = 1500.00, allowance = "+ double.Parse(allowance.Text) +" WHERE emp_id = "+ empCombo +";";
                         MySqlCommand comm = new MySqlCommand(query, conn);
                         comm.ExecuteNonQuery();
 

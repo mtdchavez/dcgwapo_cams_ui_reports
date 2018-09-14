@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
                 conn.Close();
             }
         }
-
+        public static int selected_branch_id;
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -281,6 +281,20 @@ namespace WindowsFormsApp1
             admin.ref_branch = this;
             admin.Show();
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                //TODO - Button Clicked - Execute Code Here 
+                ViewBranch viiew = new ViewBranch();
+                //viiew.ref_branch1 = this;
+                viiew.Show();
+            }
         }
     }
 }

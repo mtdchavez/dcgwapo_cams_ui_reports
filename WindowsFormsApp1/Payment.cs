@@ -26,10 +26,10 @@ namespace WindowsFormsApp1
         private void payBtn_Click(object sender, EventArgs e)
         {
             {
-                BranchPrint br = new BranchPrint();
+               /* BranchPrint br = new BranchPrint();
                 br.ref_dashadmin = this;
                 br.Show();
-                this.Hide();
+                this.Hide();*/
             }
             try
             {
